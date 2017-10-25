@@ -1,0 +1,30 @@
+{
+  "info": {
+    "first_name": "Sandesh",
+    "last_name": "Choudhary",
+    "designation": "Software Developer",
+    "dob": "22 May, 1994"
+  },
+  "contact": {
+    "mobile": "8608579662",
+    "email": "sandeshchoudhary5@gmail.com"
+  },
+  "experience": [
+    {
+      "employer": "Innovaccer Analytics Pvt. Ltd.",
+      "title": "Software developer"
+    }
+  ],
+  "technology": [
+    "C/C++",
+    "HTML",
+    "CSS/SCSS",
+    "Javascript",
+    "NodeJs",
+    "AngularJs",
+    "ReactJs",
+    "SQL",
+    "MongoDB",
+    "Linux"
+  ]
+}
