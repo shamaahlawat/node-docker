@@ -87,7 +87,7 @@ app.use('/public', express.static(__dirname + '/public'));
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/src/index.html'));
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.listen(port, function () {
