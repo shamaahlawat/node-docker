@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9587c3613e4da4d1ce9b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9e3f369c6f6fcb8bd4f2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -3849,7 +3849,7 @@ var Resume = function (_React$Component) {
     value: function profileData() {
       var _this2 = this;
 
-      return _axios2.default.get('/resume').then(function (data) {
+      return _axios2.default.get('/public/resume.json').then(function (data) {
         _this2.setState({
           resume: data.data
         });

@@ -14,7 +14,7 @@ export default class Resume extends React.Component {
   }
 
   profileData() {
-    return axios.get('/resume')
+    return axios.get('/public/resume.json')
       .then( data => {
         this.setState({
           resume: data.data

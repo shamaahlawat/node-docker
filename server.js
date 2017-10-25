@@ -64,9 +64,9 @@ var checkType = function (req, res, next) {
   });
 };
 
-app.get('/resume', checkType, function (req, res, next) {
-  res.send(req.resolved.data);
-});
+// app.get('/resume', checkType, function (req, res, next) {
+//   res.send(req.resolved.data);
+// });
 
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
