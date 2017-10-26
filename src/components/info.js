@@ -34,8 +34,8 @@ export default class Info extends React.Component {
       return (
         <div className="info-container">
           <div className="name">
-          <h1 className="first-name">{firstName}</h1>
-          <h1 className="last-name">{lastName}</h1>
+            <h1 className="first-name no-margin">{firstName}</h1>
+            <h1 className="last-name no-margin">{lastName}</h1>
           </div>
           <span className="desg">{designation}</span>
         </div>
