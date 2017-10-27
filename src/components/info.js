@@ -1,13 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import Loader from './loader.js';
 
 export default class Info extends React.Component {
   constructor (props) {
     super(props);
     console.log(props);
     this.state = {
-        hasProps: false,
-        info: {}
+        hasProps: true,
+        info: props.data
     }
   }
 
@@ -32,13 +33,7 @@ export default class Info extends React.Component {
       const lastName = this.state.info.last_name;
       const designation = this.state.info.designation;
       return (
-        <div className="info-container">
-          <div className="name">
-            <h1 className="first-name no-margin">{firstName}</h1>
-            <h1 className="last-name no-margin">{lastName}</h1>
-          </div>
-          <span className="desg">{designation}</span>
-        </div>
+       <div></div>
       );
     } else {
       return (

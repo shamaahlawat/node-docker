@@ -4,8 +4,8 @@ export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasProps: false,
-      data: {}
+      hasProps: true,
+      data: props.data
     };
   }
 

@@ -6,8 +6,8 @@ export default class Aside extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      hasProps: false,
-      data: {}
+      hasProps: true,
+      data: props.data
     };
   }
 
@@ -19,25 +19,18 @@ export default class Aside extends React.Component {
   }
 
   render() {
-    var nameSection;
-    var contact;
-    if (this.state.hasProps) {
       const firstName = this.state.data.info.first_name;
       const lastName = this.state.data.info.last_name;
       const desg = this.state.data.info.designation;
-      contact = this.state.data.contact;
-      nameSection = (
+      const contact = this.state.data.contact;
+      const nameSection = (
         <div className="name">
           <h1 className="first-name no-margin">{firstName}</h1>
           <h1 className="last-name no-margin">{lastName}</h1>
           <h2 className="desg no-margin">{desg}</h2>
         </div>
       );
-    } else {
-      nameSection = (
-        <div>Data Loading</div>
-      );
-    }
+
     return (
       <div>
         <div className="image-container">

@@ -4,11 +4,13 @@ import './index.scss';
 import axios from 'axios';
 import Aside from './components/aside.js';
 import Info from './components/info.js';
+import Loader from './components/loader.js';
 
 export default class Resume extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      hasData: false,
       resume: {},
     };
   }
@@ -17,6 +19,7 @@ export default class Resume extends React.Component {
     return axios.get('/public/resume.json')
       .then( data => {
         this.setState({
+          hasData: true,
           resume: data.data
         });
       });
@@ -33,18 +36,25 @@ componentWillMount() {
       info: this.state.resume.info,
       contact: this.state.resume.contact
     };
-    return (
-      <div className="resume-overview">
+    if (this.state.hasData) {
+      return (
+        <div className="resume-overview">
         <div className="row header">
-          <aside className="large-4 medium-12 small-12 columns left-panel">
-            <Aside data={data} />
-          </aside>
-          <div className="large-8 medium-12 small-12 columns right-panel">
-            <Info data={info} />
-          </div>
+        <aside className="large-4 medium-12 small-12 columns left-panel">
+        <Aside data={data} />
+        </aside>
+        <div className="large-8 medium-12 small-12 columns right-panel">
         </div>
-      </div>
-    );
+        </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Loader />
+        </div>
+      );
+    }
   }
 }
 
