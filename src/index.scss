@@ -1,13 +1,11 @@
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
-
-
-// @import "foundation";
-
-// @include foundation-grid;
 @include foundation-flex-classes;
 @include foundation-flex-grid;
 
+/*
+ * Global CSS
+ */
 .no-margin {
   margin: 0px;
 }
@@ -50,6 +48,17 @@
     -webkit-animation: loader .8s ease infinite;
 }
 
+.section-heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #F8BB10;
+  padding: 2px 10px;
+  margin-bottom: 0px;
+}
+
+/*
+ * Components CSS
+ */
 .resume-overview {
   .header {
     min-height: 400px;
@@ -59,7 +68,7 @@
       height: 100vh;
       background-color: #fbfbfb;
       text-align: center;
-      padding: 10px;
+      padding-top: 10px;
 
       .image-container {
         width: 100%;
@@ -136,6 +145,23 @@
         padding: 10px;
         span {
           display: block;
+        }
+      }
+
+      .skills-container {
+        .progress-bar-container {
+          width: 50%;
+          display: inline-block;
+          padding: 10px;
+
+          label {
+            color: #939393;
+            font-weight: 600;
+          }
+
+          .progress {
+            margin-bottom: 0;
+          }
         }
       }
     }

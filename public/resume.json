@@ -16,16 +16,42 @@
       "title": "Software developer"
     }
   ],
-  "technology": [
-    "C/C++",
-    "HTML",
-    "CSS/SCSS",
-    "Javascript",
-    "NodeJs",
-    "AngularJs",
-    "ReactJs",
-    "SQL",
-    "MongoDB",
-    "Linux"
+  "skills": [
+      {
+        "title": "C/C++",
+        "level": "8"
+      },
+      {
+        "title": "HTML",
+        "level": "9"
+      },
+      {
+        "title": "Javascript",
+        "level": "8"
+      },
+      {
+        "title": "NodeJs",
+        "level": "7"
+      },
+      {
+        "title": "ReactJs",
+        "level": "8"
+      },
+      {
+        "title": "AngularJs",
+        "level": "9"
+      },
+      {
+        "title": "SQL",
+        "level": "9"
+      },
+      {
+        "title": "MongoDB",
+        "level": "7"
+      },
+      {
+        "title": "Linux",
+        "level": "8"
+      }
   ]
 }
