@@ -10,24 +10,6 @@ const compiler = webpack(webpackConfig);
 const fs = require('fs');
 const storeDir = __dirname + '/public/';
 var encoding = 'utf8';
-const mongoose = require('mongoose');
-
-/*
- * Mongo connection
- */
-mongoose.connect('mongodb://localhost/test', { useMongoClient: true });
-var db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', function () {
-
-    db.db.collection("collection-name", function(err, collection){
-        collection.find({}).toArray(function(err, data){
-            console.log(data); // it will print your collection data
-        })
-    });
-
-});
 
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
