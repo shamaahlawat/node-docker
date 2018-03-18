@@ -4,7 +4,7 @@ Sampe webapp setup to build a docker image of app and run.
 - Build docker image
 ```sh
 $ git clone https://github.com/sandeshchoudhary/node-docker.git
-$ cd node-Docker
+$ cd node-docker
 $ docker build -t nodedocker .
 ```
 
